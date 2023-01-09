@@ -1,0 +1,11 @@
+##################### Summary ##########################
+BLEU Seen: 58.42
+BLEU Unseen: 37.63
+BLEU All: 49.16
+METEOR Seen: 0.42
+METEOR Unseen: 0.33
+METEOR All: 0.37
+TER Seen: 0.38
+TER Unseen: 0.56
+TER All: 0.46
+58.42 & 37.63 & 49.16 & 0.42 & 0.33 & 0.37 & 0.38 & 0.56 & 0.46

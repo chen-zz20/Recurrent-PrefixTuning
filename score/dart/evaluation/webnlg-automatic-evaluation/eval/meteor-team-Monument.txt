@@ -1,0 +1,66 @@
+Meteor version: 1.5
+
+Eval ID:        meteor-1.5-wo-en-norm-0.85_0.2_0.6_0.75-ex_st_sy_pa-1.0_0.6_0.8_0.6
+
+Language:       English
+Format:         plaintext
+Task:           Ranking
+Modules:        exact stem synonym paraphrase
+Weights:        1.0 0.6 0.8 0.6
+Parameters:     0.85 0.2 0.6 0.75
+
+Segment 1 score:	1.0
+Segment 2 score:	1.0
+Segment 3 score:	1.0
+Segment 4 score:	0.3489915275265602
+Segment 5 score:	1.0
+Segment 6 score:	0.44961153802599
+Segment 7 score:	0.5326941738523948
+Segment 8 score:	0.63308214841882
+Segment 9 score:	0.519744746753832
+Segment 10 score:	0.404362905846901
+Segment 11 score:	0.49850006923318124
+Segment 12 score:	0.46641745911190075
+Segment 13 score:	0.5038368779755001
+Segment 14 score:	0.4863188673773739
+Segment 15 score:	0.43198229070871297
+Segment 16 score:	0.4737628716679693
+Segment 17 score:	0.4752272194649669
+Segment 18 score:	0.3496781560775165
+Segment 19 score:	0.38354925119606614
+Segment 20 score:	0.3861984438391291
+Segment 21 score:	0.5722578457540124
+Segment 22 score:	0.3701117931893732
+Segment 23 score:	0.45076630823284536
+Segment 24 score:	0.3833131394936201
+Segment 25 score:	0.2964207340280753
+Segment 26 score:	0.5501253232039381
+Segment 27 score:	0.3471376570836904
+Segment 28 score:	0.5093301600589681
+Segment 29 score:	0.42730574737115773
+Segment 30 score:	0.47664880869501003
+Segment 31 score:	0.32696398992562864
+Segment 32 score:	0.4510371495839276
+Segment 33 score:	0.4633335856948456
+
+System level statistics:
+
+
+           Test Matches                  Reference Matches
+Stage      Content  Function    Total    Content  Function    Total
+1              452       370      822        452       370      822
+2                3         0        3          3         0        3
+3                3         0        3          3         0        3
+4               19         8       27         13        17       30
+Total          477       378      855        471       387      858
+
+Test words:             989
+Reference words:        1030
+Chunks:                 274
+Precision:              0.8786950074147306
+Recall:                 0.8399052132701423
+f1:                     0.8588623563750887
+fMean:                  0.8455039002942133
+Fragmentation penalty:  0.477700712989283
+
+Final score:            0.441606084288448

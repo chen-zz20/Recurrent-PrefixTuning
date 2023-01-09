@@ -1,0 +1,144 @@
+loading from PrefixTuning. /home/chenzz/bighomework/together/PrefixTuning/gpt2/save_e2e_models_convcheck/data2textprefixtune_y_10_act_cat_b=10-e=2_d=0.0_u=no_lr=5e-05_w=0.0_s=101_r=n_m=512_small_o=1_o=1
+loading the trained tokenizer
+50257 <|endoftext|> <|endoftext|> None
+50257 <|endoftext|> <|endoftext|> None
+GPT2Config {
+  "_my_arg_task_mode": "data2text",
+  "_my_arg_tune_mode": "prefixtune",
+  "_objective_mode": 2,
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 1024,
+  "n_embd": 768,
+  "n_head": 12,
+  "n_inner": null,
+  "n_layer": 12,
+  "n_positions": 1024,
+  "resid_pdrop": 0.1,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 50
+    }
+  },
+  "vocab_size": 50257
+}
+
+GPT2Config {
+  "_my_arg_control": true,
+  "_my_arg_task_mode": "data2text",
+  "_my_arg_tune_mode": "prefixtune",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "PrefixTuning"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "format_mode": "cat",
+  "init_random": "no",
+  "init_shallow": "no",
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "lowdata": false,
+  "mid_dim": 512,
+  "model_type": "gpt2",
+  "n_ctx": 1024,
+  "n_embd": 768,
+  "n_head": 12,
+  "n_inner": null,
+  "n_layer": 12,
+  "n_positions": 1024,
+  "optim_prefix": true,
+  "prefix_dropout": 0.0,
+  "preseqlen": 10,
+  "resid_pdrop": 0.1,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 50
+    }
+  },
+  "train_weights": "no",
+  "use_infix": false,
+  "vocab_size": 50258
+}
+
+under the PrefixTuning model
+PrefixTuning
+preseqlen is 10, optimizing the prefix directly
+[Full prefix-tuning Setting :) ]
+[10,]
+[10,768,]
+[512,768,]
+[512,]
+[18432,512,]
+[18432,]
+total param is 9857034
+using the test path  ../data/e2e_data/src1_valid.txt
+../text-generation/e2e_results_conv2/data2textprefixtune_y_10_act_cat_b=10-e=2_d=0.0_u=no_lr=5e-05_w=0.0_s=101_r=n_m=512_small_o=1_o=1_valid_beam
+../text-generation/e2e_results_conv2/data2textprefixtune_y_10_act_cat_b=10-e=2_d=0.0_u=no_lr=5e-05_w=0.0_s=101_r=n_m=512_small_o=1_o=1_valid_gold
+547
+cat
+True False
+control code is  None
+beam
+[5,12,64,10,] [5,12,64,17,]
+[5,12,10,64,] [5,12,17,64,]
+OK
+[5,12,64,10,] [5,12,64,17,]
+[5,12,10,64,] [5,12,17,64,]
+OK
+[5,12,64,10,] [5,12,64,17,]
+[5,12,10,64,] [5,12,17,64,]
+OK
+[5,12,64,10,] [5,12,64,17,]
+[5,12,10,64,] [5,12,17,64,]
+OK
+[5,12,64,10,] [5,12,64,17,]
+[5,12,10,64,] [5,12,17,64,]
+OK
+[5,12,64,10,] [5,12,64,17,]
+[5,12,10,64,] [5,12,17,64,]
+OK
+[5,12,64,10,] [5,12,64,17,]
+[5,12,10,64,] [5,12,17,64,]
+OK
+[5,12,64,10,] [5,12,64,17,]
+[5,12,10,64,] [5,12,17,64,]
+OK
+[5,12,64,10,] [5,12,64,17,]
+[5,12,10,64,] [5,12,17,64,]
+OK
+[5,12,64,10,] [5,12,64,17,]
+[5,12,10,64,] [5,12,17,64,]
+OK
+[5,12,64,10,] [5,12,64,17,]
+[5,12,10,64,] [5,12,17,64,]
+OK
+[5,12,64,10,] [5,12,64,17,]
+[5,12,10,64,] [5,12,17,64,]
+OK
+[5,1,12,64,27,] [90,12,64,1,]
+[5,1,12,27,64,] [90,12,1,64,]
+python run_generation.py         --model_type=gpt2         --length 100         --model_name_or_path=gpt2         --num_return_sequences 5         --stop_token [EOS]         --tokenizer_name=/home/chenzz/bighomework/together/PrefixTuning/gpt2/save_e2e_models_convcheck/data2textprefixtune_y_10_act_cat_b=10-e=2_d=0.0_u=no_lr=5e-05_w=0.0_s=101_r=n_m=512_small_o=1_o=1         --task_mode=data2text         --control_mode=yes --tuning_mode prefixtune --gen_dir e2e_results_conv2 --eval_dataset valid     --optim_prefix no --preseqlen 20 --prefix_mode activation  --format_mode cat  --prefixModel_name_or_path /home/chenzz/bighomework/together/PrefixTuning/gpt2/save_e2e_models_convcheck/data2textprefixtune_y_10_act_cat_b=10-e=2_d=0.0_u=no_lr=5e-05_w=0.0_s=101_r=n_m=512_small_o=1_o=1 --cache_dir /home/chenzz/bighomework/gpt-model/gpt2-s3 

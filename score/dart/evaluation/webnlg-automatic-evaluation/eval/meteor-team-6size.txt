@@ -1,0 +1,57 @@
+Meteor version: 1.5
+
+Eval ID:        meteor-1.5-wo-en-norm-0.85_0.2_0.6_0.75-ex_st_sy_pa-1.0_0.6_0.8_0.6
+
+Language:       English
+Format:         plaintext
+Task:           Ranking
+Modules:        exact stem synonym paraphrase
+Weights:        1.0 0.6 0.8 0.6
+Parameters:     0.85 0.2 0.6 0.75
+
+Segment 1 score:	0.5501253232039381
+Segment 2 score:	0.3471376570836904
+Segment 3 score:	0.5093301600589681
+Segment 4 score:	0.42730574737115773
+Segment 5 score:	0.47664880869501003
+Segment 6 score:	0.45530015297947835
+Segment 7 score:	0.4688226642084785
+Segment 8 score:	0.36876789347923805
+Segment 9 score:	0.3824864104825461
+Segment 10 score:	0.4501230176651511
+Segment 11 score:	0.4741443097385136
+Segment 12 score:	0.4428555092397174
+Segment 13 score:	0.3649985876342336
+Segment 14 score:	0.4117248058331711
+Segment 15 score:	0.408316071761995
+Segment 16 score:	0.3716317169142045
+Segment 17 score:	0.4456932000538275
+Segment 18 score:	0.5637476508790347
+Segment 19 score:	0.44480065675652847
+Segment 20 score:	0.43667417808339587
+Segment 21 score:	0.49424202256763844
+Segment 22 score:	0.4661776342658685
+Segment 23 score:	0.45751238005449046
+Segment 24 score:	0.6024604280180564
+
+System level statistics:
+
+
+           Test Matches                  Reference Matches
+Stage      Content  Function    Total    Content  Function    Total
+1              471       391      862        471       391      862
+2                2         0        2          2         0        2
+3                5         1        6          5         1        6
+4               13        13       26         13        17       30
+Total          491       405      896        491       409      900
+
+Test words:             1029
+Reference words:        1085
+Chunks:                 272
+Precision:              0.8787850023730422
+Recall:                 0.837020316027088
+f1:                     0.8573943588099013
+fMean:                  0.8430301288051841
+Fragmentation penalty:  0.47250865055301017
+
+Final score:            0.44469110026791625

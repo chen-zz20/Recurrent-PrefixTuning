@@ -1,0 +1,7 @@
+**/__pycache__
+**/save_e2e_models_convcheck
+**/webnlg_models
+gpt2-model/*
+try/HW3/codes/pretrain-model/*
+try/HW3/codes/train_test/*
+!**/.gitkeep

@@ -1,0 +1,4 @@
+File
+../text-generation/e2e_results_conv2/data2textprefixtune_y_10_act_cat_b=10-e=5_d=0.0_u=no_lr=5e-05_w=0.0_s=101_r=n_m=512_xl_o=1_o=1_test_beam
+BLEU	NIST	METEOR	ROUGE_L	CIDEr
+0.6905	8.7325	0.4586	0.7087	2.4441
