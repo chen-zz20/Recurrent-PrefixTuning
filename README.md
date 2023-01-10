@@ -35,10 +35,10 @@ cd ../../score/e2e-metrics
 python3.7 -m pip install -r requirements.txt
 ```
 
-HW3 环境：
+jittor 环境：
 ```
-conda create -n HW3 --clone prefixtuning
-conda activate HW3
+conda create -n jittor --clone prefixtuning
+conda activate jittor
 python3.7 -m pip install jittor
 ```
 
@@ -82,9 +82,17 @@ cd ./score/dart/evaluation
 
 ### GPT的计图实现
 
+GPT2模型转换为jittor能够读取的state-dict模型
+```
+conda activate jittor
+cd ./
+python state-dict-convert.py --name gpt2-XXX #单个文件的实现（需对4个不同大小的gpt2模型进行处理）
+./state2dict.sh #或者直接用脚本对gpt2的四个不同大小的模型做预处理
+```
+
 训练文本生成模型：
 ```
-conda activate HW3
+conda activate jittor
 cd ./
 ./change.sh jittor #将transformer版本切换为jittor版本
 cd ./recurrence/MyGptGeneration/codes
@@ -93,7 +101,7 @@ python main.py --name YourModelName --pretain_model gpt2-XXX
 
 文本生成：
 ```
-conda activate HW3
+conda activate jittor
 cd ./
 ./change.sh jittor #将transformer版本切换为jittor版本
 cd ./recurrence/MyGptGeneration/codes
