@@ -21,6 +21,7 @@
         |—— HW3 #试图添加进webnlg数据集、E2E数据集的手写GPT版本
     |—— change.sh #用于切换transformer版本，选择其版本是jittor版本还是pytorch版本
     |—— state-dict-convert.py #将下载的基于pytorch的model文件转化为可供jittor识别使用的state_dict文件
+    |—— state2dict.sh #脚本自动执行将4个gpt2模型转换为state_dict文件
     |—— README.md
 
 ## 环境配置
