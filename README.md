@@ -17,7 +17,7 @@
     |—— try #复现过程中的一些失败的尝试
         |—— PrefixTuning #最初试图直接改动transformer库的版本
         |—— HW3 #试图添加进webnlg数据集、E2E数据集的手写GPT版本
-    |—— change.sh 用于切换transformer版本，选择其版本是jittor版本还是pytorch版本
+    |—— change.sh #用于切换transformer版本，选择其版本是jittor版本还是pytorch版本
     |—— README.md
 
 ## 环境配置
