@@ -20,8 +20,8 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('--name', type=str, default="run",
     help='Experiment name. Default: run')
-parser.add_argument('--model_config', type=str, default="./config.json",
-    help='Path to the configuration file. Default: ./config.json')    
+parser.add_argument('--model_config', type=str, default="./config/config_large.json",
+    help='Path to the configuration file. Default: ./config/config.json')    
 parser.add_argument('--tokenizer_dir', type=str, default="./tokenizer",
     help='Tokenizer file directory. Default: ./tokenizer')    
 parser.add_argument('--num_epochs', type=int, default=20,
@@ -51,7 +51,9 @@ parser.add_argument('--top_p', type=float, default=1.0,
 parser.add_argument('--top_k', type=int, default=40,
     help='The k for top-k sampling. Default: 40')
 parser.add_argument('--prefix', type=int, default=0,
-    help='prefix words number,Default 0')         
+    help='prefix words number,Default 0')
+parser.add_argument('--pretain_model', type=str, default=None,
+    help='pretained model, please choose from [gpt2, gpt2-medium, gpt2-large, gpt2-xl], default:None')          
 args = parser.parse_args()
 
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
@@ -170,26 +172,42 @@ if __name__ == '__main__':
 
     print("Loading Data ...")
     data, data_remove_pad = load_data(path=args.data_dir, tokenizer=tokenizer, PAD_ID=PAD_ID, field_list=["train", "dev", "test"], maxlen=args.maxlen)
+
+    model_config_path = args.model_config
+    pretrain_dir = args.pretrain_dir
+    if args.pretain_model is not None:
+        if args.pretain_model == "gpt2":
+            model_config_path = "./config/config.json"
+            pretrain_dir = "../../gpt-state-dict/gpt2-paras.jt"
+        elif args.pretain_model == "gpt2-medium":
+            model_config_path = "./config/config_medium.json"
+            pretrain_dir = "../../gpt-state-dict/gpt2-medium-paras.jt"
+        elif args.pretain_model == "gpt2-large":
+            model_config_path = "./config/config_large.json"
+            pretrain_dir = "../../gpt-state-dict/gpt2-large-paras.jt"
+        elif args.pretain_model == "gpt2-xl":
+            model_config_path = "./config/config_xl.json"
+            pretrain_dir = "../../gpt-state-dict/gpt2-xl-paras.jt"
+        else:
+            print("The pretain_model is not support!")
+            exit(1)
+
     if args.test is None:
-        with open(args.model_config) as fin:
+        with open(model_config_path) as fin:
             model_config = json.load(fin)
             config = ModelConfig(**model_config)
             config.prefix_word_num = args.prefix
-        if args.pretrain_dir is None:
+        if pretrain_dir is None:
             print("Created model with fresh parameters.")
             model = TfmrLMHeadModel(config)
             init_weights_func = get_init_weights_func(config=config)
             model.apply(init_weights_func)
         else:
-            name = 'gpt2'
-            # pthmodel = GPT2Model.from_pretrained(name, cache_dir=f"/home/chenzz/bighomework/gpt-model/{name}-s3")
             model = TfmrLMHeadModel(config)
             init_weights_func = get_init_weights_func(config=config)
             model.apply(init_weights_func)
-            modified_state_dict = jt.load(args.pretrain_dir)
+            modified_state_dict = jt.load(pretrain_dir)
             model.load_state_dict(modified_state_dict)
-            # print(pthmodel)
-            # del pthmodel
         #choose only prefix
         paras = [tblock.prefix_word for tblock in model.transformer.h] if config.prefix_word_num>0 else model.parameters()
         if config.prefix_word_num>0:

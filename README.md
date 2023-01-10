@@ -50,13 +50,52 @@ cd ./
 ```
 
 ## 文本生成任务
+### 原始论文复现
+
+单个模型的训练以及生成
+```
+conda activate prefixtuning
+cd ./
+./change.sh pytorch #transformer切换到pytorch版本
+cd recurrence/PrefixTuning/gpt2
+python train_e2e.py --mode YourDataSet --notes GPTModelSize
+```
+
+8个模型（2个数据集与4个GPT2预训练模型）训练的脚本实现
+```
+cd ./
+./change.sh pytorch #transformer切换到pytorch版本
+cd recurrence/PrefixTuning/gpt2
+./run.sh
+```
+
+模型评分
+
+E2E数据集的评分可以在执行上述命令下自动完成，webNLG数据集的评分需要手动完成。具体操作如下：
+```
+cp txt ./score/dart/evaluation/example/new_score.txt #把需要评分的txt文件复制到上述目录下的new_score.txt文件中
+cd ./score/dart/evaluation
+./run_eval_on_webnlg.sh
+```
+最后输出的result.txt文件即为评分文件。
+
+
+### GPT的计图实现
+
 训练文本生成模型：
 ```
+conda activate HW3
+cd ./
+./change.sh jittor #将transformer版本切换为jittor版本
 cd ./recurrence/MyGptGeneration/codes
-python main.py --name YourModelName --model_config YourModelConfig --pretrain_dir ../../../gpt-state-dict/YourModelPretrainFile
+python main.py --name YourModelName --pretain_model gpt2-XXX
 ```
+
 文本生成：
 ```
+conda activate HW3
+cd ./
+./change.sh jittor #将transformer版本切换为jittor版本
 cd ./recurrence/MyGptGeneration/codes
 python main.py --test YourModelName
 ```
