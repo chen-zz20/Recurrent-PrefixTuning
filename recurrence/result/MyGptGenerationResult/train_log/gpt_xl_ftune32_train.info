@@ -1,0 +1,2873 @@
+[38;5;2m[i 0109 11:53:53.878427 92 compiler.py:955] Jittor(1.3.6.10) src: /home/chenzz/.conda/envs/HW3/lib/python3.7/site-packages/jittor[m
+[38;5;2m[i 0109 11:53:53.881639 92 compiler.py:956] g++ at /usr/bin/g++(7.5.0)[m
+[38;5;2m[i 0109 11:53:53.881765 92 compiler.py:957] cache_path: /home/chenzz/.cache/jittor/jt1.3.6/g++7.5.0/py3.7.6/Linux-5.3.18-5x95/AMDRyzen73700Xx25/default[m
+[38;5;2m[i 0109 11:53:54.710489 92 install_cuda.py:93] cuda_driver_version: [11, 3][m
+[38;5;2m[i 0109 11:53:54.710813 92 install_cuda.py:81] restart /home/chenzz/.conda/envs/HW3/bin/python ['main.py', '--name', 'gpt-xl-ftune32', '--num_epochs', '30', '--batch_size', '8', '--model_config', 'config_xl.json', '--pretrain_dir', 'pretrain/gpt2-xl-paras.jt'][m
+[38;5;2m[i 0109 11:53:54.855643 84 compiler.py:955] Jittor(1.3.6.10) src: /home/chenzz/.conda/envs/HW3/lib/python3.7/site-packages/jittor[m
+[38;5;2m[i 0109 11:53:54.858836 84 compiler.py:956] g++ at /usr/bin/g++(7.5.0)[m
+[38;5;2m[i 0109 11:53:54.858964 84 compiler.py:957] cache_path: /home/chenzz/.cache/jittor/jt1.3.6/g++7.5.0/py3.7.6/Linux-5.3.18-5x95/AMDRyzen73700Xx25/default[m
+[38;5;2m[i 0109 11:53:55.713501 84 install_cuda.py:93] cuda_driver_version: [11, 3][m
+[38;5;2m[i 0109 11:53:55.717361 84 __init__.py:411] Found /home/chenzz/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/bin/nvcc(11.2.152) at /home/chenzz/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/bin/nvcc.[m
+[38;5;2m[i 0109 11:53:55.721886 84 __init__.py:411] Found addr2line(2.35.1) at /usr/bin/addr2line.[m
+[38;5;2m[i 0109 11:53:56.637901 84 compiler.py:1010] cuda key:cu11.2.152_sm_86[m
+[38;5;2m[i 0109 11:53:56.805106 84 __init__.py:227] Total mem: 125.72GB, using 16 procs for compiling.[m
+[38;5;2m[i 0109 11:53:56.888426 84 jit_compiler.cc:28] Load cc_path: /usr/bin/g++[m
+[38;5;2m[i 0109 11:53:57.696053 84 init.cc:62] Found cuda archs: [86,][m
+[38;5;2m[i 0109 11:53:57.714610 84 compile_extern.py:522] mpicc not found, distribution disabled.[m
+[38;5;2m[i 0109 11:53:58.689278 84 cuda_flags.cc:39] CUDA enabled.[m
+Namespace(batch_size=8, cpu_count=1, data_dir='./data', decode_strategy='random', learning_rate=0.0001, maxlen=35, model_config='config_xl.json', name='gpt-xl-ftune32', num_epochs=30, prefix=0, pretrain_dir='pretrain/gpt2-xl-paras.jt', temperature=1, test=None, tokenizer_dir='./tokenizer', top_k=40, top_p=1.0, train_dir='./train_test')
+Tokenizer PAD ID: 50256
+Loading Data ...
+677
+[50257,1600,]
+[1024,1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1,1,1024,1024,]
+[1,]
+[1600,4800,]
+[4800,]
+[1600,1600,]
+[1600,]
+[1600,]
+[1600,]
+[1600,6400,]
+[6400,]
+[6400,1600,]
+[1600,]
+[1600,]
+[1600,]
+[50257,1600,]
+jittor_model info:
+TfmrLMHeadModel(
+    transformer: TfmrModel(
+        wte: Embedding(50257, 1600)
+        wpe: Embedding(1024, 1600)
+        drop: Dropout(0.1, is_train=False)
+        h: Sequential(
+            0: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            1: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            2: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            3: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            4: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            5: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            6: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            7: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            8: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            9: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            10: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            11: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            12: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            13: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            14: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            15: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            16: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            17: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            18: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            19: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            20: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            21: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            22: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            23: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            24: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            25: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            26: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            27: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            28: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            29: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            30: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            31: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            32: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            33: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            34: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            35: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            36: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            37: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            38: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            39: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            40: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            41: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            42: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            43: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            44: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            45: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            46: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            47: TfmrBlock(
+                ln_1: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(4800, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(6400, None, None)
+                    c_proj: TransposeLinear(1600, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+        )
+        ln_f: LayerNorm((1600,), 1e-05, elementwise_affine=True)
+    )
+    lm_head: Linear(1600, 50257, None, None)
+)[38;5;3m[w 0109 11:54:08.504267 84 grad.cc:77] grads[4] 'transformer.h.0.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(11993:1:1:1:i0:o0:s1:n0,float32,transformer.h.0.attn.masked_bias,7fad1ab00000)[1,][m
+[38;5;3m[w 0109 11:54:08.504300 84 grad.cc:77] grads[17] 'transformer.h.1.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12021:1:1:1:i0:o0:s1:n0,float32,transformer.h.1.attn.masked_bias,7fad1ab00200)[1,][m
+[38;5;3m[w 0109 11:54:08.504307 84 grad.cc:77] grads[30] 'transformer.h.2.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12049:1:1:1:i0:o0:s1:n0,float32,transformer.h.2.attn.masked_bias,7fad1ab00400)[1,][m
+[38;5;3m[w 0109 11:54:08.504314 84 grad.cc:77] grads[43] 'transformer.h.3.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12077:1:1:1:i0:o0:s1:n0,float32,transformer.h.3.attn.masked_bias,7fad1ab00600)[1,][m
+[38;5;3m[w 0109 11:54:08.504322 84 grad.cc:77] grads[56] 'transformer.h.4.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12105:1:1:1:i0:o0:s1:n0,float32,transformer.h.4.attn.masked_bias,7fad1ab00800)[1,][m
+[38;5;3m[w 0109 11:54:08.504345 84 grad.cc:77] grads[69] 'transformer.h.5.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12133:1:1:1:i0:o0:s1:n0,float32,transformer.h.5.attn.masked_bias,7fad1ab00a00)[1,][m
+[38;5;3m[w 0109 11:54:08.504356 84 grad.cc:77] grads[82] 'transformer.h.6.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12161:1:1:1:i0:o0:s1:n0,float32,transformer.h.6.attn.masked_bias,7fad1ab00c00)[1,][m
+[38;5;3m[w 0109 11:54:08.504365 84 grad.cc:77] grads[95] 'transformer.h.7.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12189:1:1:1:i0:o0:s1:n0,float32,transformer.h.7.attn.masked_bias,7fad1ab00e00)[1,][m
+[38;5;3m[w 0109 11:54:08.504375 84 grad.cc:77] grads[108] 'transformer.h.8.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12217:1:1:1:i0:o0:s1:n0,float32,transformer.h.8.attn.masked_bias,7fad1ab01000)[1,][m
+[38;5;3m[w 0109 11:54:08.504384 84 grad.cc:77] grads[121] 'transformer.h.9.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12245:1:1:1:i0:o0:s1:n0,float32,transformer.h.9.attn.masked_bias,7fad1ab01200)[1,][m
+[38;5;3m[w 0109 11:54:08.504395 84 grad.cc:77] grads[134] 'transformer.h.10.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12273:1:1:1:i0:o0:s1:n0,float32,transformer.h.10.attn.masked_bias,7fad1ab01400)[1,][m
+[38;5;3m[w 0109 11:54:08.504406 84 grad.cc:77] grads[147] 'transformer.h.11.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12301:1:1:1:i0:o0:s1:n0,float32,transformer.h.11.attn.masked_bias,7fad1ab01600)[1,][m
+[38;5;3m[w 0109 11:54:08.504415 84 grad.cc:77] grads[160] 'transformer.h.12.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12329:1:1:1:i0:o0:s1:n0,float32,transformer.h.12.attn.masked_bias,7fad1ab01800)[1,][m
+[38;5;3m[w 0109 11:54:08.504426 84 grad.cc:77] grads[173] 'transformer.h.13.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12357:1:1:1:i0:o0:s1:n0,float32,transformer.h.13.attn.masked_bias,7fad1ab01a00)[1,][m
+[38;5;3m[w 0109 11:54:08.504437 84 grad.cc:77] grads[186] 'transformer.h.14.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12385:1:1:1:i0:o0:s1:n0,float32,transformer.h.14.attn.masked_bias,7fad1ab01c00)[1,][m
+[38;5;3m[w 0109 11:54:08.504444 84 grad.cc:77] grads[199] 'transformer.h.15.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12413:1:1:1:i0:o0:s1:n0,float32,transformer.h.15.attn.masked_bias,7fad1ab01e00)[1,][m
+[38;5;3m[w 0109 11:54:08.504455 84 grad.cc:77] grads[212] 'transformer.h.16.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12441:1:1:1:i0:o0:s1:n0,float32,transformer.h.16.attn.masked_bias,7fad1ab02000)[1,][m
+[38;5;3m[w 0109 11:54:08.504465 84 grad.cc:77] grads[225] 'transformer.h.17.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12469:1:1:1:i0:o0:s1:n0,float32,transformer.h.17.attn.masked_bias,7fad1ab02200)[1,][m
+[38;5;3m[w 0109 11:54:08.504474 84 grad.cc:77] grads[238] 'transformer.h.18.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12497:1:1:1:i0:o0:s1:n0,float32,transformer.h.18.attn.masked_bias,7fad1ab02400)[1,][m
+[38;5;3m[w 0109 11:54:08.504484 84 grad.cc:77] grads[251] 'transformer.h.19.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12525:1:1:1:i0:o0:s1:n0,float32,transformer.h.19.attn.masked_bias,7fad1ab02600)[1,][m
+[38;5;3m[w 0109 11:54:08.504493 84 grad.cc:77] grads[264] 'transformer.h.20.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12553:1:1:1:i0:o0:s1:n0,float32,transformer.h.20.attn.masked_bias,7fad1ab02800)[1,][m
+[38;5;3m[w 0109 11:54:08.504504 84 grad.cc:77] grads[277] 'transformer.h.21.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12581:1:1:1:i0:o0:s1:n0,float32,transformer.h.21.attn.masked_bias,7fad1ab02a00)[1,][m
+[38;5;3m[w 0109 11:54:08.504515 84 grad.cc:77] grads[290] 'transformer.h.22.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12609:1:1:1:i0:o0:s1:n0,float32,transformer.h.22.attn.masked_bias,7fad1ab02c00)[1,][m
+[38;5;3m[w 0109 11:54:08.504529 84 grad.cc:77] grads[303] 'transformer.h.23.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12637:1:1:1:i0:o0:s1:n0,float32,transformer.h.23.attn.masked_bias,7fad1ab02e00)[1,][m
+[38;5;3m[w 0109 11:54:08.504539 84 grad.cc:77] grads[316] 'transformer.h.24.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12665:1:1:1:i0:o0:s1:n0,float32,transformer.h.24.attn.masked_bias,7fad1ab03000)[1,][m
+[38;5;3m[w 0109 11:54:08.504550 84 grad.cc:77] grads[329] 'transformer.h.25.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12693:1:1:1:i0:o0:s1:n0,float32,transformer.h.25.attn.masked_bias,7fad1ab03200)[1,][m
+[38;5;3m[w 0109 11:54:08.504558 84 grad.cc:77] grads[342] 'transformer.h.26.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12721:1:1:1:i0:o0:s1:n0,float32,transformer.h.26.attn.masked_bias,7fad1ab03400)[1,][m
+[38;5;3m[w 0109 11:54:08.504570 84 grad.cc:77] grads[355] 'transformer.h.27.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12749:1:1:1:i0:o0:s1:n0,float32,transformer.h.27.attn.masked_bias,7fad1ab03600)[1,][m
+[38;5;3m[w 0109 11:54:08.504580 84 grad.cc:77] grads[368] 'transformer.h.28.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12777:1:1:1:i0:o0:s1:n0,float32,transformer.h.28.attn.masked_bias,7fad1ab03800)[1,][m
+[38;5;3m[w 0109 11:54:08.504589 84 grad.cc:77] grads[381] 'transformer.h.29.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12805:1:1:1:i0:o0:s1:n0,float32,transformer.h.29.attn.masked_bias,7fad1ab03a00)[1,][m
+[38;5;3m[w 0109 11:54:08.504602 84 grad.cc:77] grads[394] 'transformer.h.30.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12833:1:1:1:i0:o0:s1:n0,float32,transformer.h.30.attn.masked_bias,7fad1ab03c00)[1,][m
+[38;5;3m[w 0109 11:54:08.504610 84 grad.cc:77] grads[407] 'transformer.h.31.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12861:1:1:1:i0:o0:s1:n0,float32,transformer.h.31.attn.masked_bias,7fad1ab03e00)[1,][m
+[38;5;3m[w 0109 11:54:08.504620 84 grad.cc:77] grads[420] 'transformer.h.32.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12889:1:1:1:i0:o0:s1:n0,float32,transformer.h.32.attn.masked_bias,7fad1ab04000)[1,][m
+[38;5;3m[w 0109 11:54:08.504632 84 grad.cc:77] grads[433] 'transformer.h.33.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12917:1:1:1:i0:o0:s1:n0,float32,transformer.h.33.attn.masked_bias,7fad1ab04200)[1,][m
+[38;5;3m[w 0109 11:54:08.504642 84 grad.cc:77] grads[446] 'transformer.h.34.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12945:1:1:1:i0:o0:s1:n0,float32,transformer.h.34.attn.masked_bias,7fad1ab04400)[1,][m
+[38;5;3m[w 0109 11:54:08.504652 84 grad.cc:77] grads[459] 'transformer.h.35.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(12973:1:1:1:i0:o0:s1:n0,float32,transformer.h.35.attn.masked_bias,7fad1ab04600)[1,][m
+[38;5;3m[w 0109 11:54:08.504662 84 grad.cc:77] grads[472] 'transformer.h.36.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(13001:1:1:1:i0:o0:s1:n0,float32,transformer.h.36.attn.masked_bias,7fad1ab04800)[1,][m
+[38;5;3m[w 0109 11:54:08.504674 84 grad.cc:77] grads[485] 'transformer.h.37.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(13029:1:1:1:i0:o0:s1:n0,float32,transformer.h.37.attn.masked_bias,7fad1ab04a00)[1,][m
+[38;5;3m[w 0109 11:54:08.504683 84 grad.cc:77] grads[498] 'transformer.h.38.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(13057:1:1:1:i0:o0:s1:n0,float32,transformer.h.38.attn.masked_bias,7fad1ab04c00)[1,][m
+[38;5;3m[w 0109 11:54:08.504695 84 grad.cc:77] grads[511] 'transformer.h.39.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(13085:1:1:1:i0:o0:s1:n0,float32,transformer.h.39.attn.masked_bias,7fad1ab04e00)[1,][m
+[38;5;3m[w 0109 11:54:08.504709 84 grad.cc:77] grads[524] 'transformer.h.40.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(13113:1:1:1:i0:o0:s1:n0,float32,transformer.h.40.attn.masked_bias,7fad1ab05000)[1,][m
+[38;5;3m[w 0109 11:54:08.504719 84 grad.cc:77] grads[537] 'transformer.h.41.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(13141:1:1:1:i0:o0:s1:n0,float32,transformer.h.41.attn.masked_bias,7fad1ab05200)[1,][m
+[38;5;3m[w 0109 11:54:08.504729 84 grad.cc:77] grads[550] 'transformer.h.42.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(13169:1:1:1:i0:o0:s1:n0,float32,transformer.h.42.attn.masked_bias,7fad1ab05400)[1,][m
+[38;5;3m[w 0109 11:54:08.504740 84 grad.cc:77] grads[563] 'transformer.h.43.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(13197:1:1:1:i0:o0:s1:n0,float32,transformer.h.43.attn.masked_bias,7fad1ab05600)[1,][m
+[38;5;3m[w 0109 11:54:08.504749 84 grad.cc:77] grads[576] 'transformer.h.44.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(13225:1:1:1:i0:o0:s1:n0,float32,transformer.h.44.attn.masked_bias,7fad1ab05800)[1,][m
+[38;5;3m[w 0109 11:54:08.504762 84 grad.cc:77] grads[589] 'transformer.h.45.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(13253:1:1:1:i0:o0:s1:n0,float32,transformer.h.45.attn.masked_bias,7fad1ab05a00)[1,][m
+[38;5;3m[w 0109 11:54:08.504771 84 grad.cc:77] grads[602] 'transformer.h.46.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(13281:1:1:1:i0:o0:s1:n0,float32,transformer.h.46.attn.masked_bias,7fad1ab05c00)[1,][m
+[38;5;3m[w 0109 11:54:08.504779 84 grad.cc:77] grads[615] 'transformer.h.47.attn.masked_bias' doesn't have gradient. It will be set to zero: Var(13309:1:1:1:i0:o0:s1:n0,float32,transformer.h.47.attn.masked_bias,7fad1ab05e00)[1,][m
+[38;5;3m[w 0109 11:54:09.124987 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.125019 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 17679 lived_ops: 38370
+ name: sfrl is_device: 1 used: 16.65GB(98.5%) unused: 268.2MB(1.55%) total: 16.91GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 28.91GB gpu: 22.91GB cpu:     6GB
+ free: cpu(28.04GB) gpu(6.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.125955 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.125968 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 17674 lived_ops: 38370
+ name: sfrl is_device: 1 used: 16.67GB(98.4%) unused: 275.2MB(1.59%) total: 16.94GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 28.94GB gpu: 22.94GB cpu:     6GB
+ free: cpu(28.04GB) gpu(6.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.126885 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.126897 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 17674 lived_ops: 38370
+ name: sfrl is_device: 1 used:  16.7GB(98.4%) unused: 275.2MB(1.58%) total: 16.97GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 28.96GB gpu: 22.96GB cpu:     6GB
+ free: cpu(28.04GB) gpu(6.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.127795 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.127806 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 17674 lived_ops: 38370
+ name: sfrl is_device: 1 used: 16.73GB(98.4%) unused: 275.2MB(1.58%) total:    17GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 28.99GB gpu: 22.99GB cpu:     6GB
+ free: cpu(28.04GB) gpu(6.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.128817 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.128830 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 17497 lived_ops: 38370
+ name: sfrl is_device: 1 used: 16.76GB(98.4%) unused: 271.7MB(1.56%) total: 17.03GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.02GB gpu: 23.02GB cpu:     6GB
+ free: cpu(28.04GB) gpu(6.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.129709 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.129721 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 17492 lived_ops: 38370
+ name: sfrl is_device: 1 used: 16.79GB(98.4%) unused: 279.3MB(1.6%) total: 17.07GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.06GB gpu: 23.06GB cpu:     6GB
+ free: cpu(28.04GB) gpu(6.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.130576 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.130587 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 17492 lived_ops: 38370
+ name: sfrl is_device: 1 used: 16.83GB(98.4%) unused: 279.3MB(1.59%) total: 17.11GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu:  29.1GB gpu:  23.1GB cpu:     6GB
+ free: cpu(28.04GB) gpu(6.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.131446 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.131458 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 17492 lived_ops: 38370
+ name: sfrl is_device: 1 used: 16.87GB(98.4%) unused: 279.3MB(1.59%) total: 17.14GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.14GB gpu: 23.14GB cpu:     6GB
+ free: cpu(28.04GB) gpu(6.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.132395 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.132410 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 17406 lived_ops: 38370
+ name: sfrl is_device: 1 used: 16.91GB(98.4%) unused: 284.5MB(1.62%) total: 17.18GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.18GB gpu: 23.18GB cpu:     6GB
+ free: cpu(28.04GB) gpu(6.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.133290 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.133303 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 17401 lived_ops: 38370
+ name: sfrl is_device: 1 used: 16.94GB(98.3%) unused: 293.3MB(1.66%) total: 17.22GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.22GB gpu: 23.22GB cpu:     6GB
+ free: cpu(28.04GB) gpu(6.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.134155 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.134166 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 17401 lived_ops: 38370
+ name: sfrl is_device: 1 used: 16.98GB(98.3%) unused: 293.3MB(1.66%) total: 17.26GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.26GB gpu: 23.26GB cpu:     6GB
+ free: cpu(28.04GB) gpu(6.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.135020 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.135031 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 17401 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.01GB(98.3%) unused: 293.3MB(1.66%) total:  17.3GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu:  29.3GB gpu:  23.3GB cpu:     6GB
+ free: cpu(28.04GB) gpu(6.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.137033 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.137057 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 17132 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.09GB(98.5%) unused:   258MB(1.45%) total: 17.34GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.34GB gpu: 23.34GB cpu:     6GB
+ free: cpu(28.04GB) gpu(6.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.138845 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.138865 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 17127 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.11GB(98.5%) unused:   265MB(1.49%) total: 17.37GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.37GB gpu: 23.37GB cpu:     6GB
+ free: cpu(28.04GB) gpu(6.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.140593 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.140612 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 17127 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.14GB(98.5%) unused:   265MB(1.49%) total:  17.4GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.39GB gpu: 23.39GB cpu:     6GB
+ free: cpu(28.04GB) gpu(6.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.142344 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.142362 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 17127 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.17GB(98.5%) unused:   265MB(1.48%) total: 17.43GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.42GB gpu: 23.42GB cpu:     6GB
+ free: cpu(28.04GB) gpu(6.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.144346 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.144369 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16950 lived_ops: 38370
+ name: sfrl is_device: 1 used:  17.2GB(98.5%) unused: 262.1MB(1.47%) total: 17.46GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.45GB gpu: 23.45GB cpu:     6GB
+ free: cpu(28.04GB) gpu(6.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.145726 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.145737 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16945 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.23GB(98.5%) unused: 269.1MB(1.5%) total:  17.5GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.49GB gpu: 23.49GB cpu:     6GB
+ free: cpu(28.04GB) gpu(6.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.147250 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.147262 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16945 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.27GB(98.5%) unused: 269.1MB(1.5%) total: 17.54GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.53GB gpu: 23.53GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.148211 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.148228 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16945 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.31GB(98.5%) unused: 269.1MB(1.5%) total: 17.57GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.57GB gpu: 23.57GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.149237 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.149248 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16859 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.35GB(98.5%) unused: 274.3MB(1.52%) total: 17.61GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.61GB gpu: 23.61GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.150136 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.150148 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16854 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.38GB(98.4%) unused: 283.1MB(1.57%) total: 17.65GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.65GB gpu: 23.65GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.151190 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.151201 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16854 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.41GB(98.4%) unused: 283.1MB(1.56%) total: 17.69GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.69GB gpu: 23.69GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.152120 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.152132 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16854 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.45GB(98.4%) unused: 283.1MB(1.56%) total: 17.73GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.73GB gpu: 23.73GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.153251 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.153263 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16672 lived_ops: 38370
+ name: sfrl is_device: 1 used:  17.5GB(98.5%) unused: 277.4MB(1.52%) total: 17.77GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.77GB gpu: 23.77GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.154138 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.154149 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16672 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.52GB(98.5%) unused: 277.4MB(1.52%) total: 17.79GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.79GB gpu: 23.79GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.155336 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.155350 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16585 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.53GB(98.4%) unused: 289.5MB(1.59%) total: 17.81GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu:  29.8GB gpu:  23.8GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.156281 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.156293 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16580 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.55GB(98.4%) unused: 296.5MB(1.62%) total: 17.84GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.83GB gpu: 23.83GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.157200 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.157211 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16580 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.58GB(98.4%) unused: 296.5MB(1.62%) total: 17.87GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.86GB gpu: 23.86GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.158103 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.158114 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16580 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.61GB(98.4%) unused: 296.5MB(1.62%) total:  17.9GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.89GB gpu: 23.89GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.159139 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.159150 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16403 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.64GB(98.4%) unused:   293MB(1.6%) total: 17.93GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.92GB gpu: 23.92GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.160074 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.160086 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16398 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.67GB(98.4%) unused:   300MB(1.63%) total: 17.96GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 29.96GB gpu: 23.96GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.160969 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.160980 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16398 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.71GB(98.4%) unused:   300MB(1.63%) total:    18GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu:    30GB gpu:    24GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.161854 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.161864 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16398 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.75GB(98.4%) unused:   300MB(1.62%) total: 18.04GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.04GB gpu: 24.04GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.162823 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.162836 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16312 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.78GB(98.4%) unused: 305.2MB(1.65%) total: 18.08GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.08GB gpu: 24.08GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.163767 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.163778 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16307 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.81GB(98.3%) unused:   314MB(1.69%) total: 18.12GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.12GB gpu: 24.12GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.164670 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.164681 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16307 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.85GB(98.3%) unused:   314MB(1.69%) total: 18.16GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.16GB gpu: 24.16GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.165577 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.165589 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16307 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.89GB(98.3%) unused:   314MB(1.68%) total:  18.2GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu:  30.2GB gpu:  24.2GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.166656 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.166668 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16125 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.96GB(98.5%) unused: 287.2MB(1.54%) total: 18.24GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.23GB gpu: 24.23GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.167793 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.167805 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16038 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.97GB(98.4%) unused: 298.6MB(1.6%) total: 18.26GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.25GB gpu: 24.25GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.168731 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.168747 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16033 lived_ops: 38370
+ name: sfrl is_device: 1 used: 17.99GB(98.4%) unused: 305.6MB(1.63%) total: 18.29GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.28GB gpu: 24.28GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.169636 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.169646 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16033 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.02GB(98.4%) unused: 305.6MB(1.63%) total: 18.32GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.31GB gpu: 24.31GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.170553 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.170563 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 16033 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.05GB(98.4%) unused: 305.6MB(1.63%) total: 18.35GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.34GB gpu: 24.34GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.171597 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.171609 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 15856 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.08GB(98.4%) unused: 302.1MB(1.61%) total: 18.38GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.37GB gpu: 24.37GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.172592 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.172605 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 15851 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.11GB(98.4%) unused: 309.1MB(1.64%) total: 18.41GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.41GB gpu: 24.41GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.173472 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.173482 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 15851 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.15GB(98.4%) unused: 309.1MB(1.64%) total: 18.45GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.45GB gpu: 24.45GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.174364 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.174376 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 15851 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.19GB(98.4%) unused: 309.1MB(1.63%) total: 18.49GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.49GB gpu: 24.49GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.175336 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.175347 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 15765 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.22GB(98.3%) unused: 314.9MB(1.66%) total: 18.53GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.53GB gpu: 24.53GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.176257 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.176268 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 15760 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.25GB(98.3%) unused: 323.7MB(1.7%) total: 18.57GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.57GB gpu: 24.57GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.177153 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.177164 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 15760 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.29GB(98.3%) unused: 323.7MB(1.7%) total: 18.61GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.61GB gpu: 24.61GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.178039 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.178049 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 15760 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.33GB(98.3%) unused: 323.7MB(1.7%) total: 18.65GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.64GB gpu: 24.64GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.179227 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.179239 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 15491 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.41GB(98.5%) unused:   289MB(1.51%) total: 18.69GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.68GB gpu: 24.68GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.180568 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.180591 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 15486 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.43GB(98.5%) unused: 296.7MB(1.55%) total: 18.72GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.71GB gpu: 24.71GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.182442 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.182459 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 15486 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.46GB(98.5%) unused: 296.7MB(1.55%) total: 18.75GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.74GB gpu: 24.74GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.184291 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.184307 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 15486 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.49GB(98.5%) unused: 296.7MB(1.54%) total: 18.78GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.77GB gpu: 24.77GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.185823 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.185834 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 15309 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.52GB(98.5%) unused: 293.1MB(1.52%) total:  18.8GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu:  30.8GB gpu:  24.8GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.186783 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.186794 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 15304 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.55GB(98.4%) unused: 300.2MB(1.56%) total: 18.84GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.84GB gpu: 24.84GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.187687 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.187696 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 15304 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.59GB(98.4%) unused: 300.2MB(1.55%) total: 18.88GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.88GB gpu: 24.88GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.188555 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.188565 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 15304 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.63GB(98.5%) unused: 300.2MB(1.55%) total: 18.92GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.92GB gpu: 24.92GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.189515 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.189525 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 15218 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.66GB(98.4%) unused: 305.3MB(1.57%) total: 18.96GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 30.96GB gpu: 24.96GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.190450 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.190460 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 15213 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.69GB(98.4%) unused: 314.1MB(1.61%) total:    19GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu:    31GB gpu:    25GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.191317 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.191331 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 15213 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.73GB(98.4%) unused: 314.1MB(1.61%) total: 19.04GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.04GB gpu: 25.04GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:09.192204 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:09.192214 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 15213 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.77GB(98.4%) unused: 314.1MB(1.61%) total: 19.08GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.07GB gpu: 25.07GB cpu:     6GB
+ free: cpu(28.04GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:30.534041 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:30.534084 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 15031 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.83GB(98.5%) unused:   298MB(1.52%) total: 19.12GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.11GB gpu: 25.11GB cpu:     6GB
+ free: cpu(27.96GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:54:30.536366 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:54:30.536386 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14944 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.84GB(98.5%) unused: 299.2MB(1.53%) total: 19.14GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.13GB gpu: 25.13GB cpu:     6GB
+ free: cpu(27.96GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:55:09.397449 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:55:09.397488 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14939 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.87GB(98.4%) unused: 306.2MB(1.56%) total: 19.17GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.16GB gpu: 25.16GB cpu:     6GB
+ free: cpu(27.82GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:55:09.399308 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:55:09.399323 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14939 lived_ops: 38370
+ name: sfrl is_device: 1 used:  18.9GB(98.4%) unused: 306.2MB(1.56%) total:  19.2GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.19GB gpu: 25.19GB cpu:     6GB
+ free: cpu(27.82GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:55:09.401187 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:55:09.401207 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14939 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.93GB(98.4%) unused: 306.2MB(1.56%) total: 19.22GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.22GB gpu: 25.22GB cpu:     6GB
+ free: cpu(27.82GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:56:07.801519 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:56:07.801559 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14762 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.96GB(98.5%) unused: 302.6MB(1.53%) total: 19.25GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.25GB gpu: 25.25GB cpu:     6GB
+ free: cpu(27.69GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:56:07.803378 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:56:07.803395 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14757 lived_ops: 38370
+ name: sfrl is_device: 1 used: 18.99GB(98.4%) unused: 309.6MB(1.57%) total: 19.29GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.29GB gpu: 25.29GB cpu:     6GB
+ free: cpu(27.68GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:56:07.805323 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:56:07.805344 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14757 lived_ops: 38370
+ name: sfrl is_device: 1 used: 19.03GB(98.4%) unused: 309.6MB(1.56%) total: 19.33GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.33GB gpu: 25.33GB cpu:     6GB
+ free: cpu(27.68GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:56:07.807210 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:56:07.807230 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14757 lived_ops: 38370
+ name: sfrl is_device: 1 used: 19.07GB(98.4%) unused: 309.6MB(1.56%) total: 19.37GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.37GB gpu: 25.37GB cpu:     6GB
+ free: cpu(27.68GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:56:07.809227 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:56:07.809248 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14671 lived_ops: 38370
+ name: sfrl is_device: 1 used:  19.1GB(98.4%) unused: 314.8MB(1.58%) total: 19.41GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.41GB gpu: 25.41GB cpu:     6GB
+ free: cpu(27.68GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:56:07.810537 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:56:07.810546 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14666 lived_ops: 38370
+ name: sfrl is_device: 1 used: 19.13GB(98.4%) unused: 323.6MB(1.62%) total: 19.45GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.45GB gpu: 25.45GB cpu:     6GB
+ free: cpu(27.68GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:56:07.811404 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:56:07.811413 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14666 lived_ops: 38370
+ name: sfrl is_device: 1 used: 19.17GB(98.4%) unused: 323.6MB(1.62%) total: 19.49GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.48GB gpu: 25.48GB cpu:     6GB
+ free: cpu(27.68GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:56:07.812297 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:56:07.812306 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14666 lived_ops: 38370
+ name: sfrl is_device: 1 used: 19.21GB(98.4%) unused: 323.6MB(1.62%) total: 19.53GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.52GB gpu: 25.52GB cpu:     6GB
+ free: cpu(27.68GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:56:29.732912 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:56:29.732956 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14484 lived_ops: 38370
+ name: sfrl is_device: 1 used: 19.28GB(98.5%) unused: 297.3MB(1.48%) total: 19.57GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.56GB gpu: 25.56GB cpu:     6GB
+ free: cpu( 27.6GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:56:29.735419 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:56:29.735439 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14397 lived_ops: 38370
+ name: sfrl is_device: 1 used: 19.28GB(98.5%) unused: 308.7MB(1.54%) total: 19.59GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.58GB gpu: 25.58GB cpu:     6GB
+ free: cpu(27.59GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:57:14.178769 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:57:14.178812 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14392 lived_ops: 38370
+ name: sfrl is_device: 1 used: 19.31GB(98.4%) unused: 315.8MB(1.57%) total: 19.62GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.61GB gpu: 25.61GB cpu:     6GB
+ free: cpu(27.47GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:57:14.180828 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:57:14.180849 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14392 lived_ops: 38370
+ name: sfrl is_device: 1 used: 19.34GB(98.4%) unused: 315.8MB(1.57%) total: 19.64GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.64GB gpu: 25.64GB cpu:     6GB
+ free: cpu(27.47GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:57:14.182629 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:57:14.182644 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14392 lived_ops: 38370
+ name: sfrl is_device: 1 used: 19.37GB(98.4%) unused: 315.8MB(1.57%) total: 19.67GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.67GB gpu: 25.67GB cpu:     6GB
+ free: cpu(27.47GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:58:06.208914 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:58:06.208962 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14215 lived_ops: 38370
+ name: sfrl is_device: 1 used:  19.4GB(98.5%) unused: 312.2MB(1.55%) total:  19.7GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu:  31.7GB gpu:  25.7GB cpu:     6GB
+ free: cpu(27.35GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:58:06.210886 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:58:06.210922 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14210 lived_ops: 38370
+ name: sfrl is_device: 1 used: 19.43GB(98.4%) unused: 319.2MB(1.58%) total: 19.74GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.74GB gpu: 25.74GB cpu:     6GB
+ free: cpu(27.34GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:58:06.212642 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:58:06.212661 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14210 lived_ops: 38370
+ name: sfrl is_device: 1 used: 19.47GB(98.4%) unused: 319.2MB(1.58%) total: 19.78GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.78GB gpu: 25.78GB cpu:     6GB
+ free: cpu(27.34GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:58:06.214355 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:58:06.214372 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14210 lived_ops: 38370
+ name: sfrl is_device: 1 used: 19.51GB(98.4%) unused: 319.2MB(1.57%) total: 19.82GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.82GB gpu: 25.82GB cpu:     6GB
+ free: cpu(27.34GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:58:06.216399 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:58:06.216422 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14124 lived_ops: 38370
+ name: sfrl is_device: 1 used: 19.54GB(98.4%) unused: 324.4MB(1.6%) total: 19.86GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.86GB gpu: 25.86GB cpu:     6GB
+ free: cpu(27.34GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:58:06.428053 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:58:06.428100 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14119 lived_ops: 38370
+ name: sfrl is_device: 1 used: 19.57GB(98.4%) unused: 333.2MB(1.64%) total:  19.9GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.89GB gpu: 25.89GB cpu:     6GB
+ free: cpu(27.31GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:58:06.430090 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:58:06.430113 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14119 lived_ops: 38370
+ name: sfrl is_device: 1 used: 19.61GB(98.4%) unused: 333.2MB(1.63%) total: 19.94GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.93GB gpu: 25.93GB cpu:     6GB
+ free: cpu(27.31GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:58:06.431825 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:58:06.431842 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 14119 lived_ops: 38370
+ name: sfrl is_device: 1 used: 19.65GB(98.4%) unused: 333.2MB(1.63%) total: 19.98GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 31.97GB gpu: 25.97GB cpu:     6GB
+ free: cpu(27.31GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:58:27.238725 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:58:27.238773 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 13850 lived_ops: 38370
+ name: sfrl is_device: 1 used: 19.72GB(98.5%) unused: 297.7MB(1.45%) total: 20.02GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 32.01GB gpu: 26.01GB cpu:     6GB
+ free: cpu(27.19GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:59:09.048022 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:59:09.048068 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 13845 lived_ops: 38370
+ name: sfrl is_device: 1 used: 19.75GB(98.5%) unused: 304.7MB(1.48%) total: 20.04GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 32.04GB gpu: 26.04GB cpu:     6GB
+ free: cpu(27.06GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:59:09.049992 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:59:09.050011 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 13845 lived_ops: 38370
+ name: sfrl is_device: 1 used: 19.78GB(98.5%) unused: 304.7MB(1.48%) total: 20.07GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu: 32.07GB gpu: 26.07GB cpu:     6GB
+ free: cpu(27.06GB) gpu(2.562MB)
+===========================
+[m
+[38;5;3m[w 0109 11:59:09.051810 84 cuda_device_allocator.cc:29] Unable to alloc cuda device memory, use unify memory instead. This may cause low performance.[m
+[38;5;2m[i 0109 11:59:09.051828 84 cuda_device_allocator.cc:31] 
+=== display_memory_info ===
+ total_cpu_ram: 125.7GB total_device_ram:  23.7GB
+ hold_vars: 2710 lived_vars: 13845 lived_ops: 38370
+ name: sfrl is_device: 1 used: 19.81GB(98.5%) unused: 304.7MB(1.48%) total:  20.1GB
+ name: sfrl is_device: 1 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 5.981GB(99.7%) unused: 15.57MB(0.254%) total: 5.996GB
+ name: sfrl is_device: 0 used: 3.975MB(99.4%) unused:  25.5KB(0.623%) total:     4MB
+ name: temp is_device: 0 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ name: temp is_device: 1 used:     0 B(-nan%) unused:     0 B(-nan%) total:     0 B
+ cpu&gpu:  32.1GB gpu:  26.1GB cpu:     6GB
+ free: cpu(27.06GB) gpu(2.562MB)
+===========================
+[m
+[38;5;1m[e 0109 11:59:24.102829 84 log.cc:258] Caught SIGINT, quick exit[m

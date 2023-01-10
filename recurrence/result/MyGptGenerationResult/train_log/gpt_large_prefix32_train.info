@@ -1,0 +1,1005 @@
+[38;5;2m[i 0109 07:18:43.149380 00 compiler.py:955] Jittor(1.3.6.10) src: /home/chenzz/.conda/envs/HW3/lib/python3.7/site-packages/jittor[m
+[38;5;2m[i 0109 07:18:43.152183 00 compiler.py:956] g++ at /usr/bin/g++(7.5.0)[m
+[38;5;2m[i 0109 07:18:43.152238 00 compiler.py:957] cache_path: /home/chenzz/.cache/jittor/jt1.3.6/g++7.5.0/py3.7.6/Linux-5.3.18-5x95/AMDRyzen73700Xx25/default[m
+[38;5;2m[i 0109 07:18:43.728800 00 install_cuda.py:93] cuda_driver_version: [11, 3][m
+[38;5;2m[i 0109 07:18:43.729099 00 install_cuda.py:81] restart /home/chenzz/.conda/envs/HW3/bin/python ['main.py', '--name', 'gpt-large-prefix32', '--num_epochs', '30', '--prefix', '32', '--model_config', 'config_large.json', '--pretrain_dir', 'pretrain/gpt2-large-paras.jt', '--batch_size', '16'][m
+[38;5;2m[i 0109 07:18:43.867484 36 compiler.py:955] Jittor(1.3.6.10) src: /home/chenzz/.conda/envs/HW3/lib/python3.7/site-packages/jittor[m
+[38;5;2m[i 0109 07:18:43.871119 36 compiler.py:956] g++ at /usr/bin/g++(7.5.0)[m
+[38;5;2m[i 0109 07:18:43.871234 36 compiler.py:957] cache_path: /home/chenzz/.cache/jittor/jt1.3.6/g++7.5.0/py3.7.6/Linux-5.3.18-5x95/AMDRyzen73700Xx25/default[m
+[38;5;2m[i 0109 07:18:44.707461 36 install_cuda.py:93] cuda_driver_version: [11, 3][m
+[38;5;2m[i 0109 07:18:44.712124 36 __init__.py:411] Found /home/chenzz/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/bin/nvcc(11.2.152) at /home/chenzz/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/bin/nvcc.[m
+[38;5;2m[i 0109 07:18:44.716447 36 __init__.py:411] Found addr2line(2.35.1) at /usr/bin/addr2line.[m
+[38;5;2m[i 0109 07:18:45.705838 36 compiler.py:1010] cuda key:cu11.2.152_sm_86[m
+[38;5;2m[i 0109 07:18:45.868769 36 __init__.py:227] Total mem: 125.72GB, using 16 procs for compiling.[m
+[38;5;2m[i 0109 07:18:45.947464 36 jit_compiler.cc:28] Load cc_path: /usr/bin/g++[m
+[38;5;2m[i 0109 07:18:46.783861 36 init.cc:62] Found cuda archs: [86,][m
+[38;5;2m[i 0109 07:18:46.801340 36 compile_extern.py:522] mpicc not found, distribution disabled.[m
+[38;5;2m[i 0109 07:18:47.714028 36 cuda_flags.cc:39] CUDA enabled.[m
+Namespace(batch_size=16, cpu_count=1, data_dir='./data', decode_strategy='random', learning_rate=0.0001, maxlen=35, model_config='config_large.json', name='gpt-large-prefix32', num_epochs=30, prefix=32, pretrain_dir='pretrain/gpt2-large-paras.jt', temperature=1, test=None, tokenizer_dir='./tokenizer', top_k=40, top_p=1.0, train_dir='./train_test')
+Tokenizer PAD ID: 50256
+Loading Data ...
+37
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[32,1280,]
+[50257,1280,]
+jittor_model info:
+TfmrLMHeadModel(
+    transformer: TfmrModel(
+        wte: Embedding(50257, 1280)
+        wpe: Embedding(1024, 1280)
+        drop: Dropout(0.1, is_train=False)
+        h: Sequential(
+            0: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            1: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            2: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            3: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            4: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            5: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            6: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            7: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            8: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            9: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            10: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            11: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            12: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            13: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            14: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            15: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            16: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            17: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            18: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            19: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            20: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            21: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            22: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            23: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            24: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            25: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            26: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            27: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            28: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            29: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            30: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            31: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            32: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            33: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            34: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+            35: TfmrBlock(
+                ln_1: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                attn: TfmrAttention(
+                    c_attn: TransposeLinear(3840, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    attn_dropout: Dropout(0.1, is_train=False)
+                    resid_dropout: Dropout(0.1, is_train=False)
+                )
+                ln_2: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+                mlp: TfmrMLP(
+                    c_fc: TransposeLinear(5120, None, None)
+                    c_proj: TransposeLinear(1280, None, None)
+                    dropout: Dropout(0.1, is_train=False)
+                )
+            )
+        )
+        ln_f: LayerNorm((1280,), 1e-05, elementwise_affine=True)
+    )
+    lm_head: Linear(1280, 50257, None, None)
+)
+Compiling Operators(36/36) used: 2.32s eta:    0s 
+
+Compiling Operators(25/25) used: 2.32s eta:    0s 
+
+Epoch 1 Batch 10, train loss 10.634725
+Epoch 1 Batch 20, train loss 10.118603
+Epoch 1 Batch 30, train loss 9.504561
+Epoch 1 Batch 40, train loss 8.818852
+Epoch 1 Batch 50, train loss 8.249562
+Epoch 1 Batch 60, train loss 7.815806
+Epoch 1 Batch 70, train loss 7.479674
+Epoch 1 Batch 80, train loss 7.212147
+Epoch 1 Batch 90, train loss 6.991743
+Epoch 1 Batch 100, train loss 6.819379
+Epoch 1 Batch 110, train loss 6.276776
+Epoch 1 Batch 120, train loss 5.841805
+Epoch 1 Batch 130, train loss 5.540241
+Epoch 1 Batch 140, train loss 5.385948
+Epoch 1 Batch 150, train loss 5.300994
+Epoch 1 Batch 160, train loss 5.260461
+Epoch 1 Batch 170, train loss 5.286136
+Epoch 1 Batch 180, train loss 5.302904
+Epoch 1 Batch 190, train loss 5.326405
+Epoch 1 Batch 200, train loss 5.345109
+Epoch 1 Batch 210, train loss 5.368904
+Epoch 1 Batch 220, train loss 5.379704
+Epoch 1 Batch 230, train loss 5.385751
+Epoch 1 Batch 240, train loss 5.380739
+Epoch 1 Batch 250, train loss 5.386439
+Epoch 1 Batch 260, train loss 5.387386
+Epoch 1 Batch 270, train loss 5.332594
+Epoch 1 Batch 280, train loss 5.283572
+Epoch 1 Batch 290, train loss 5.261051
+Epoch 1 Batch 300, train loss 5.225212
+Epoch 1 Batch 310, train loss 5.190096
+Epoch 1 Batch 320, train loss 5.160296
+Epoch 1 Batch 330, train loss 5.128986
+Epoch 1 Batch 340, train loss 5.123028
+Epoch 1 Batch 350, train loss 5.105410
+Epoch 1 Batch 360, train loss 5.077745
+Epoch 1 Batch 370, train loss 5.060992
+Epoch 1 Batch 380, train loss 5.065970
+Epoch 1 Batch 390, train loss 5.039025
+Epoch 1 Batch 400, train loss 5.022832
+Epoch 1 Batch 410, train loss 5.006243
+Epoch 1 Batch 420, train loss 4.998230
+Epoch 1 Batch 430, train loss 4.996678
+Epoch 1 Batch 440, train loss 4.988043
+Epoch 1 Batch 450, train loss 4.988514
+Epoch 1 Batch 460, train loss 4.973514
+Epoch 1 Batch 470, train loss 4.960607
+Epoch 1 Batch 480, train loss 4.940755
+Epoch 1 Batch 490, train loss 4.932520
+Epoch 1 Batch 500, train loss 4.931709
+Epoch 1 Batch 510, train loss 4.936720
+Epoch 1 Batch 520, train loss 4.928071
+Epoch 1 Batch 530, train loss 4.900757
+Epoch 1 Batch 540, train loss 4.878343
+Epoch 1 Batch 550, train loss 4.866665
+Epoch 1 Batch 560, train loss 4.872360
+Epoch 1 Batch 570, train loss 4.864146
+Epoch 1 Batch 580, train loss 4.876710
+Epoch 1 Batch 590, train loss 4.873324
+Epoch 1 Batch 600, train loss 4.888462
+Epoch 1 Batch 610, train loss 4.882458
+Epoch 1 Batch 620, train loss 4.876267
+Epoch 1 Batch 630, train loss 4.895782
+Epoch 1 Batch 640, train loss 4.887480
+Epoch 1 Batch 650, train loss 4.880140
+Epoch 1 Batch 660, train loss 4.860409
+Epoch 1 Batch 670, train loss 4.858775
+Epoch 1 Batch 680, train loss 4.843348
+Epoch 1 Batch 690, train loss 4.822995
+Epoch 1 Batch 700, train loss 4.775156
+Epoch 1 Batch 710, train loss 4.734408
+Epoch 1 Batch 720, train loss 4.732829
+Epoch 1 Batch 730, train loss 4.713946
+Epoch 1 Batch 740, train loss 4.705247
+Epoch 1 Batch 750, train loss 4.682703
+Epoch 1 Batch 760, train loss 4.657144
+Epoch 1 Batch 770, train loss 4.626610
+Epoch 1 Batch 780, train loss 4.599723
+Epoch 1 Batch 790, train loss 4.575413
+Epoch 1 Batch 800, train loss 4.554606
+Epoch 1 Batch 810, train loss 4.537810
+Epoch 1 Batch 820, train loss 4.502086
+Epoch 1 Batch 830, train loss 4.473600
+Epoch 1 Batch 840, train loss 4.455442
+Epoch 1 Batch 850, train loss 4.429978
+Epoch 1 Batch 860, train loss 4.430472
+Epoch 1 Batch 870, train loss 4.426193
+Epoch 1 Batch 880, train loss 4.410217
+Epoch 1 Batch 890, train loss 4.408967
+Epoch 1 Batch 900, train loss 4.417080
+Epoch 1 Batch 910, train loss 4.415698
+Epoch 1 Batch 920, train loss 4.408791
+Epoch 1 Batch 930, train loss 4.415600
+Epoch 1 of 30 took 413.19183135032654s
+  training loss:                 5.082034613786222
+  validation loss:               5.129062637472153
+  validation perplexity:         168.85876196199118
+  best epoch:                    1
+  best validation perplexity:    168.85876196199118
+Epoch 2 Batch 10, train loss 4.882872
+Epoch 2 Batch 20, train loss 4.901288
+Epoch 2 Batch 30, train loss 4.909293
+Epoch 2 Batch 40, train loss 4.938539
+Epoch 2 Batch 50, train loss 4.986771
+Epoch 2 Batch 60, train loss 4.993161
+Epoch 2 Batch 70, train loss 5.013802
+Epoch 2 Batch 80, train loss 5.019619
+Epoch 2 Batch 90, train loss 5.017528
+Epoch 2 Batch 100, train loss 5.010500
+Epoch 2 Batch 110, train loss 5.033854
+Epoch 2 Batch 120, train loss 5.047558
+Epoch 2 Batch 130, train loss 5.060670
+Epoch 2 Batch 140, train loss 5.067625
+Epoch 2 Batch 150, train loss 5.053333
+Epoch 2 Batch 160, train loss 5.057079
+Epoch 2 Batch 170, train loss 5.041654
+Epoch 2 Batch 180, train loss 5.026566
+Epoch 2 Batch 190, train loss 5.014711
+Epoch 2 Batch 200, train loss 5.021453
+Epoch 2 Batch 210, train loss 5.005243
+Epoch 2 Batch 220, train loss 4.999461
+Epoch 2 Batch 230, train loss 4.981865
+Epoch 2 Batch 240, train loss 4.946662
+Epoch 2 Batch 250, train loss 4.925097
+Epoch 2 Batch 260, train loss 4.908421
+Epoch 2 Batch 270, train loss 4.892843
+Epoch 2 Batch 280, train loss 4.868893
+Epoch 2 Batch 290, train loss 4.872341
+Epoch 2 Batch 300, train loss 4.858020
+Epoch 2 Batch 310, train loss 4.843886
+Epoch 2 Batch 320, train loss 4.829546
+Epoch 2 Batch 330, train loss 4.821615
+Epoch 2 Batch 340, train loss 4.827642
+Epoch 2 Batch 350, train loss 4.828102
+Epoch 2 Batch 360, train loss 4.824237
+Epoch 2 Batch 370, train loss 4.819204
+Epoch 2 Batch 380, train loss 4.837634
+Epoch 2 Batch 390, train loss 4.828976
+Epoch 2 Batch 400, train loss 4.815478
+Epoch 2 Batch 410, train loss 4.816759
+Epoch 2 Batch 420, train loss 4.815615
+Epoch 2 Batch 430, train loss 4.818584
+Epoch 2 Batch 440, train loss 4.822551
+Epoch 2 Batch 450, train loss 4.820865
+Epoch 2 Batch 460, train loss 4.805397
+Epoch 2 Batch 470, train loss 4.805396
+Epoch 2 Batch 480, train loss 4.803974
+Epoch 2 Batch 490, train loss 4.807316
+Epoch 2 Batch 500, train loss 4.818677
+Epoch 2 Batch 510, train loss 4.817321
+Epoch 2 Batch 520, train loss 4.811722
+Epoch 2 Batch 530, train loss 4.786665
+Epoch 2 Batch 540, train loss 4.777416
+Epoch 2 Batch 550, train loss 4.780013
+Epoch 2 Batch 560, train loss 4.792486
+Epoch 2 Batch 570, train loss 4.794644
+Epoch 2 Batch 580, train loss 4.801805
+Epoch 2 Batch 590, train loss 4.792058
+Epoch 2 Batch 600, train loss 4.764156
+Epoch 2 Batch 610, train loss 4.723097
+Epoch 2 Batch 620, train loss 4.689144
+Epoch 2 Batch 630, train loss 4.687724
+Epoch 2 Batch 640, train loss 4.648459
+Epoch 2 Batch 650, train loss 4.612011
+Epoch 2 Batch 660, train loss 4.570593
+Epoch 2 Batch 670, train loss 4.540092
+Epoch 2 Batch 680, train loss 4.503044
+Epoch 2 Batch 690, train loss 4.462042
+Epoch 2 Batch 700, train loss 4.440559
+Epoch 2 Batch 710, train loss 4.432792
+Epoch 2 Batch 720, train loss 4.442973
+Epoch 2 Batch 730, train loss 4.434623
+Epoch 2 Batch 740, train loss 4.443389
+Epoch 2 Batch 750, train loss 4.439886
+Epoch 2 Batch 760, train loss 4.425452
+Epoch 2 Batch 770, train loss 4.411481
+Epoch 2 Batch 780, train loss 4.400997
+Epoch 2 Batch 790, train loss 4.393227
+Epoch 2 Batch 800, train loss 4.390304
+Epoch 2 Batch 810, train loss 4.381954
+Epoch 2 Batch 820, train loss 4.358437
+Epoch 2 Batch 830, train loss 4.339373
+Epoch 2 Batch 840, train loss 4.325853
+Epoch 2 Batch 850, train loss 4.307098
+Epoch 2 Batch 860, train loss 4.315643
+Epoch 2 Batch 870, train loss 4.316178
+Epoch 2 Batch 880, train loss 4.302612
+Epoch 2 Batch 890, train loss 4.304177
+Epoch 2 Batch 900, train loss 4.302418
+Epoch 2 Batch 910, train loss 4.297812
+Epoch 2 Batch 920, train loss 4.290376
+Epoch 2 Batch 930, train loss 4.297255
+Epoch 2 of 30 took 243.65995264053345s
+  training loss:                 4.697272773744709
+  validation loss:               5.129061970996856
+  validation perplexity:         168.85864942183528
+  best epoch:                    2
+  best validation perplexity:    168.85864942183528
+Epoch 3 Batch 10, train loss 4.882853
+Epoch 3 Batch 20, train loss 4.901243
+Epoch 3 Batch 30, train loss 4.909264
+Epoch 3 Batch 40, train loss 4.938513
+Epoch 3 Batch 50, train loss 4.986750
+Epoch 3 Batch 60, train loss 4.993143
+Epoch 3 Batch 70, train loss 5.013788
+Epoch 3 Batch 80, train loss 5.019603
+Epoch 3 Batch 90, train loss 5.017513
+Epoch 3 Batch 100, train loss 5.010482
+Epoch 3 Batch 110, train loss 5.033839
+Epoch 3 Batch 120, train loss 5.047551
+Epoch 3 Batch 130, train loss 5.060663
+Epoch 3 Batch 140, train loss 5.067624
+Epoch 3 Batch 150, train loss 5.053330
+Epoch 3 Batch 160, train loss 5.057072
+Epoch 3 Batch 170, train loss 5.041642
+Epoch 3 Batch 180, train loss 5.026559
+Epoch 3 Batch 190, train loss 5.014702
+Epoch 3 Batch 200, train loss 5.021447
+Epoch 3 Batch 210, train loss 5.005234
+Epoch 3 Batch 220, train loss 4.999451
+Epoch 3 Batch 230, train loss 4.981854
+Epoch 3 Batch 240, train loss 4.946643
+Epoch 3 Batch 250, train loss 4.925080
+Epoch 3 Batch 260, train loss 4.908403
+Epoch 3 Batch 270, train loss 4.892834
+Epoch 3 Batch 280, train loss 4.868880
+Epoch 3 Batch 290, train loss 4.872337
+Epoch 3 Batch 300, train loss 4.858018
+Epoch 3 Batch 310, train loss 4.843876
+Epoch 3 Batch 320, train loss 4.829533
+Epoch 3 Batch 330, train loss 4.821607
+Epoch 3 Batch 340, train loss 4.827641
+Epoch 3 Batch 350, train loss 4.828100
+Epoch 3 Batch 360, train loss 4.824238
+Epoch 3 Batch 370, train loss 4.819204
+Epoch 3 Batch 380, train loss 4.837633
+Epoch 3 Batch 390, train loss 4.828969
+Epoch 3 Batch 400, train loss 4.815466
+Epoch 3 Batch 410, train loss 4.816757
+Epoch 3 Batch 420, train loss 4.815611
+Epoch 3 Batch 430, train loss 4.818577
+Epoch 3 Batch 440, train loss 4.822538
+Epoch 3 Batch 450, train loss 4.820852
+Epoch 3 Batch 460, train loss 4.805386
+Epoch 3 Batch 470, train loss 4.805382
+Epoch 3 Batch 480, train loss 4.803964
+Epoch 3 Batch 490, train loss 4.807307
+Epoch 3 Batch 500, train loss 4.818673
+Epoch 3 Batch 510, train loss 4.817322
+Epoch 3 Batch 520, train loss 4.811722
+Epoch 3 Batch 530, train loss 4.786663
+Epoch 3 Batch 540, train loss 4.777419
+Epoch 3 Batch 550, train loss 4.780019
+Epoch 3 Batch 560, train loss 4.792491
+Epoch 3 Batch 570, train loss 4.794648
+Epoch 3 Batch 580, train loss 4.801813
+Epoch 3 Batch 590, train loss 4.792068
+Epoch 3 Batch 600, train loss 4.764166
+Epoch 3 Batch 610, train loss 4.723101
+Epoch 3 Batch 620, train loss 4.689156
+Epoch 3 Batch 630, train loss 4.687741
+Epoch 3 Batch 640, train loss 4.648473
+Epoch 3 Batch 650, train loss 4.612029
+Epoch 3 Batch 660, train loss 4.570613
+Epoch 3 Batch 670, train loss 4.540117
+Epoch 3 Batch 680, train loss 4.503062
+Epoch 3 Batch 690, train loss 4.462058
+Epoch 3 Batch 700, train loss 4.440573
+Epoch 3 Batch 710, train loss 4.432806
+Epoch 3 Batch 720, train loss 4.442988
+Epoch 3 Batch 730, train loss 4.434631
+Epoch 3 Batch 740, train loss 4.443394
+Epoch 3 Batch 750, train loss 4.439896
+Epoch 3 Batch 760, train loss 4.425456
+Epoch 3 Batch 770, train loss 4.411482
+Epoch 3 Batch 780, train loss 4.400997
+Epoch 3 Batch 790, train loss 4.393225
+Epoch 3 Batch 800, train loss 4.390302
+Epoch 3 Batch 810, train loss 4.381957
+Epoch 3 Batch 820, train loss 4.358436
+Epoch 3 Batch 830, train loss 4.339375
+Epoch 3 Batch 840, train loss 4.325854
+Epoch 3 Batch 850, train loss 4.307090
+Epoch 3 Batch 860, train loss 4.315639
+Epoch 3 Batch 870, train loss 4.316170
+Epoch 3 Batch 880, train loss 4.302608
+Epoch 3 Batch 890, train loss 4.304174
+Epoch 3 Batch 900, train loss 4.302418
+Epoch 3 Batch 910, train loss 4.297805
+Epoch 3 Batch 920, train loss 4.290364
+Epoch 3 Batch 930, train loss 4.297243
+Epoch 3 of 30 took 243.7729618549347s
+  training loss:                 4.697269382507308
+  validation loss:               5.129061257553101
+  validation perplexity:         168.85852895072924
+  best epoch:                    3
+  best validation perplexity:    168.85852895072924
+Epoch 4 Batch 10, train loss 4.882792
+Epoch 4 Batch 20, train loss 4.901248
+Epoch 4 Batch 30, train loss 4.909276
+Epoch 4 Batch 40, train loss 4.938512
+Epoch 4 Batch 50, train loss 4.986745
+Epoch 4 Batch 60, train loss 4.993134
+Epoch 4 Batch 70, train loss 5.013766
+Epoch 4 Batch 80, train loss 5.019584
+Epoch 4 Batch 90, train loss 5.017499
+Epoch 4 Batch 100, train loss 5.010462
+Epoch 4 Batch 110, train loss 5.033827
+Epoch 4 Batch 120, train loss 5.047529
+Epoch 4 Batch 130, train loss 5.060635
+Epoch 4 Batch 140, train loss 5.067598
+Epoch 4 Batch 150, train loss 5.053306
+Epoch 4 Batch 160, train loss 5.057053
+Epoch 4 Batch 170, train loss 5.041626
+Epoch 4 Batch 180, train loss 5.026540
+Epoch 4 Batch 190, train loss 5.014683
+Epoch 4 Batch 200, train loss 5.021439
+Epoch 4 Batch 210, train loss 5.005224
+Epoch 4 Batch 220, train loss 4.999446
+Epoch 4 Batch 230, train loss 4.981849
+Epoch 4 Batch 240, train loss 4.946642
+Epoch 4 Batch 250, train loss 4.925080
+Epoch 4 Batch 260, train loss 4.908400
+Epoch 4 Batch 270, train loss 4.892835
+Epoch 4 Batch 280, train loss 4.868882
+Epoch 4 Batch 290, train loss 4.872338
+Epoch 4 Batch 300, train loss 4.858013
+Epoch 4 Batch 310, train loss 4.843869
+Epoch 4 Batch 320, train loss 4.829527
+Epoch 4 Batch 330, train loss 4.821602
+Epoch 4 Batch 340, train loss 4.827627
+Epoch 4 Batch 350, train loss 4.828082
+Epoch 4 Batch 360, train loss 4.824224
+Epoch 4 Batch 370, train loss 4.819186
+Epoch 4 Batch 380, train loss 4.837639
+Epoch 4 Batch 390, train loss 4.828976
+Epoch 4 Batch 400, train loss 4.815475
+Epoch 4 Batch 410, train loss 4.816767
+Epoch 4 Batch 420, train loss 4.815618
+Epoch 4 Batch 430, train loss 4.818587
+Epoch 4 Batch 440, train loss 4.822556
+Epoch 4 Batch 450, train loss 4.820867
+Epoch 4 Batch 460, train loss 4.805401
+Epoch 4 Batch 470, train loss 4.805404
+Epoch 4 Batch 480, train loss 4.803968
+Epoch 4 Batch 490, train loss 4.807317
+Epoch 4 Batch 500, train loss 4.818685
+Epoch 4 Batch 510, train loss 4.817330
+Epoch 4 Batch 520, train loss 4.811736
+Epoch 4 Batch 530, train loss 4.786674
+Epoch 4 Batch 540, train loss 4.777427
+Epoch 4 Batch 550, train loss 4.780033
+Epoch 4 Batch 560, train loss 4.792499
+Epoch 4 Batch 570, train loss 4.794657
+Epoch 4 Batch 580, train loss 4.801818
+Epoch 4 Batch 590, train loss 4.792064
+Epoch 4 Batch 600, train loss 4.764158
+Epoch 4 Batch 610, train loss 4.723101
+Epoch 4 Batch 620, train loss 4.689150
+Epoch 4 Batch 630, train loss 4.687727
+Epoch 4 Batch 640, train loss 4.648464
+Epoch 4 Batch 650, train loss 4.612016
+Epoch 4 Batch 660, train loss 4.570602
+Epoch 4 Batch 670, train loss 4.540100
+Epoch 4 Batch 680, train loss 4.503045
+Epoch 4 Batch 690, train loss 4.462045
+Epoch 4 Batch 700, train loss 4.440569
+Epoch 4 Batch 710, train loss 4.432799
+Epoch 4 Batch 720, train loss 4.442981
+Epoch 4 Batch 730, train loss 4.434626
+Epoch 4 Batch 740, train loss 4.443391
+Epoch 4 Batch 750, train loss 4.439889
+Epoch 4 Batch 760, train loss 4.425450
+Epoch 4 Batch 770, train loss 4.411470
+Epoch 4 Batch 780, train loss 4.400987
+Epoch 4 Batch 790, train loss 4.393211
+Epoch 4 Batch 800, train loss 4.390280
+Epoch 4 Batch 810, train loss 4.381934
+Epoch 4 Batch 820, train loss 4.358407
+Epoch 4 Batch 830, train loss 4.339350
+Epoch 4 Batch 840, train loss 4.325827
+Epoch 4 Batch 850, train loss 4.307068
+Epoch 4 Batch 860, train loss 4.315619
+Epoch 4 Batch 870, train loss 4.316156
+Epoch 4 Batch 880, train loss 4.302594
+Epoch 4 Batch 890, train loss 4.304167
+Epoch 4 Batch 900, train loss 4.302411
+Epoch 4 Batch 910, train loss 4.297808
+Epoch 4 Batch 920, train loss 4.290374
+Epoch 4 Batch 930, train loss 4.297259
+Validation loss: 168.860, becomes larger. Stop training.
