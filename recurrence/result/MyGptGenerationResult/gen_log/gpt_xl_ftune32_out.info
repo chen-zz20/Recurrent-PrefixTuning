@@ -1,0 +1,24 @@
+[38;5;2m[i 0109 14:23:06.981182 20 compiler.py:955] Jittor(1.3.6.10) src: /home/chenzz/.conda/envs/HW3/lib/python3.7/site-packages/jittor[m
+[38;5;2m[i 0109 14:23:06.984159 20 compiler.py:956] g++ at /usr/bin/g++(7.5.0)[m
+[38;5;2m[i 0109 14:23:06.984228 20 compiler.py:957] cache_path: /home/chenzz/.cache/jittor/jt1.3.6/g++7.5.0/py3.7.6/Linux-5.3.18-5x95/AMDRyzen73700Xx25/default[m
+[38;5;2m[i 0109 14:23:07.228648 20 install_cuda.py:93] cuda_driver_version: [11, 3][m
+[38;5;2m[i 0109 14:23:07.229005 20 install_cuda.py:81] restart /home/chenzz/.conda/envs/HW3/bin/python ['main.py', '--test', 'gpt-xl-ftune32', '--batch_size', '10'][m
+[38;5;2m[i 0109 14:23:07.391048 36 compiler.py:955] Jittor(1.3.6.10) src: /home/chenzz/.conda/envs/HW3/lib/python3.7/site-packages/jittor[m
+[38;5;2m[i 0109 14:23:07.394330 36 compiler.py:956] g++ at /usr/bin/g++(7.5.0)[m
+[38;5;2m[i 0109 14:23:07.394449 36 compiler.py:957] cache_path: /home/chenzz/.cache/jittor/jt1.3.6/g++7.5.0/py3.7.6/Linux-5.3.18-5x95/AMDRyzen73700Xx25/default[m
+[38;5;2m[i 0109 14:23:07.403513 36 install_cuda.py:93] cuda_driver_version: [11, 3][m
+[38;5;2m[i 0109 14:23:07.407834 36 __init__.py:411] Found /home/chenzz/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/bin/nvcc(11.2.152) at /home/chenzz/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/bin/nvcc.[m
+[38;5;2m[i 0109 14:23:07.411563 36 __init__.py:411] Found addr2line(2.35.1) at /usr/bin/addr2line.[m
+[38;5;2m[i 0109 14:23:08.433222 36 compiler.py:1010] cuda key:cu11.2.152_sm_86[m
+[38;5;2m[i 0109 14:23:08.606056 36 __init__.py:227] Total mem: 125.72GB, using 16 procs for compiling.[m
+[38;5;2m[i 0109 14:23:08.684875 36 jit_compiler.cc:28] Load cc_path: /usr/bin/g++[m
+[38;5;2m[i 0109 14:23:09.526826 36 init.cc:62] Found cuda archs: [86,][m
+[38;5;2m[i 0109 14:23:09.547486 36 compile_extern.py:522] mpicc not found, distribution disabled.[m
+[38;5;2m[i 0109 14:23:10.533490 36 cuda_flags.cc:39] CUDA enabled.[m
+Namespace(batch_size=10, cpu_count=1, data_dir='./data', decode_strategy='random', learning_rate=0.0001, maxlen=35, model_config='./config.json', name='run', num_epochs=20, prefix=0, pretrain_dir=None, temperature=1, test='gpt-xl-ftune32', tokenizer_dir='./tokenizer', top_k=40, top_p=1.0, train_dir='./train_test')
+Tokenizer PAD ID: 50256
+Loading Data ...
+Traceback (most recent call last):
+  File "main.py", line 252, in <module>
+    raise RuntimeError("No such checkpoint")
+RuntimeError: No such checkpoint
